@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* ── Light sport-green theme ────────────────────── */
+    --background:        138  30%  97%;   /* #f4faf5 — light green-white */
+    --foreground:        150  35%  10%;   /* #0e2214 — deep forest text */
+
+    --card:              0    0%  100%;
+    --card-foreground:   150  35%  10%;
+
+    --popover:           0    0%  100%;
+    --popover-foreground: 150 35%  10%;
+
+    --surface:           138  22%  94%;   /* #eaf5ec — light green tint */
+
+    /* Vibrant sport green — primary */
+    --primary:           142  72%  32%;   /* #168a3c */
+    --primary-foreground: 0   0%  100%;
+
+    /* Light green tint — secondary */
+    --secondary:         142  50%  92%;   /* #d9f4e1 */
+    --secondary-foreground: 142 72%  25%;
+
+    --muted:             138  18%  92%;
+    --muted-foreground:  150  14%  48%;
+
+    --accent:            142  72%  32%;
+    --accent-foreground: 0    0%  100%;
+
+    /* Electric orange — highlight / gold CTA */
+    --highlight:         28   95%  52%;   /* #f77e0f */
+    --highlight-foreground: 0  0%  100%;
+
+    /* Deep forest green — footer / dark panels */
+    --navy:              150  60%  10%;   /* #0a2616 */
+    --navy-foreground:   0    0%  100%;
+
+    /* Danger */
+    --destructive:       0    72%  54%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border:            142  20%  86%;   /* #cfe8d4 */
+    --input:             142  20%  86%;
+    --ring:              142  72%  32%;
+    --radius:            0.6rem;
+  }
+}
+
+@layer base {
+  * { @apply border-border box-border; }
+  body { @apply bg-background text-foreground; }
+  h1, h2, h3, h4 { @apply font-heading; }
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Orange ring for rank #1 card ── */
+.rank-1-glow {
+  box-shadow:
+    0 0 0 2px hsl(28 95% 52% / 0.55),
+    0 4px 28px hsl(142 72% 32% / 0.12);
+}
+
+/* ── Thin animated underline for nav links ── */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: -2px;
+  width: 0; height: 2px;
+  background: hsl(var(--primary));
+  transition: width 0.2s ease;
+}
+.nav-link:hover::after { width: 100%; }
+
+/* ── Subtle card hover lift ── */
+.card-hover {
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.card-hover:hover {
+  box-shadow: 0 8px 32px hsl(142 72% 32% / 0.12);
+  transform: translateY(-2px);
+}
+
+/* ── Hero sport pattern overlay ── */
+.hero-pattern {
+  background-image:
+    radial-gradient(circle at 20% 50%, hsl(142 72% 32% / 0.18) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, hsl(28 95% 52% / 0.12) 0%, transparent 40%);
+}
