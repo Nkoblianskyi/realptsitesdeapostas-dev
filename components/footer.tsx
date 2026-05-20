@@ -96,7 +96,7 @@ export function Footer() {
               { src: "/srij-new.svg", alt: "SRIJ — Serviço de Regulação e Inspeção de Jogos", href: "https://www.srij.turismodeportugal.pt/", whiteBg: false },
               { src: "/jogo-responsavel-new.png", alt: "Jogo Responsável", href: "https://www.jogoresponsavel.pt/", whiteBg: false },
               { src: "/gamble.webp", alt: "Gamble Ware", href: "https://www.gambleaware.org/", whiteBg: false },
-              { src: "/icad.png", alt: "ICAD — Instituto da Droga e Dependências", href: "https://www.sicad.pt/", whiteBg: true },
+              { src: "/icad.png", alt: "ICAD — Instituto da Droga e Dependências", href: "https://www.icad.pt/", whiteBg: true },
               { src: "/gamecare.svg", alt: "GameCare", href: "https://www.gamcare.org", whiteBg: true },
             ].map(({ src, alt, href, whiteBg }) => (
               <a
