@@ -3,9 +3,9 @@ import { Shield } from "lucide-react"
 
 const footerNav = [
   { label: "Política de Privacidade", href: "/privacy-policy" },
-  { label: "Política de Cookies",     href: "/cookie-policy" },
-  { label: "Sobre Nós",               href: "/about" },
-  { label: "Jogo Responsável",        href: "/responsible-gambling" },
+  { label: "Política de Cookies", href: "/cookie-policy" },
+  { label: "Sobre Nós", href: "/about" },
+  { label: "Jogo Responsável", href: "/responsible-gambling" },
 ]
 
 function FooterLogo() {
@@ -93,10 +93,11 @@ export function Footer() {
           <p className="text-[10px] font-heading font-bold uppercase tracking-widest text-white/30 mb-4">Jogo Responsável &amp; Regulação</p>
           <div className="flex flex-row flex-wrap items-center gap-3">
             {[
-              { src: "/srij-new.svg",              alt: "SRIJ — Serviço de Regulação e Inspeção de Jogos", href: "https://www.srij.turismodeportugal.pt/", whiteBg: false },
-              { src: "/jogo-responsavel-new.png",  alt: "Jogo Responsável",                               href: "https://www.jogoresponsavel.pt/",          whiteBg: false },
-              { src: "/esc.svg",                   alt: "ESC — European Sponsorship Compliance",           href: "https://www.srij.turismodeportugal.pt/",   whiteBg: false },
-              { src: "/icad.png",                  alt: "ICAD — Instituto da Droga e Dependências",        href: "https://www.sicad.pt/",                    whiteBg: true  },
+              { src: "/srij-new.svg", alt: "SRIJ — Serviço de Regulação e Inspeção de Jogos", href: "https://www.srij.turismodeportugal.pt/", whiteBg: false },
+              { src: "/jogo-responsavel-new.png", alt: "Jogo Responsável", href: "https://www.jogoresponsavel.pt/", whiteBg: false },
+              { src: "/gamble.webp", alt: "Gamble Ware", href: "https://www.gambleaware.org/", whiteBg: false },
+              { src: "/icad.png", alt: "ICAD — Instituto da Droga e Dependências", href: "https://www.sicad.pt/", whiteBg: true },
+              { src: "/gamecare.svg", alt: "GameCare", href: "https://www.gamcare.org", whiteBg: true },
             ].map(({ src, alt, href, whiteBg }) => (
               <a
                 key={alt}
